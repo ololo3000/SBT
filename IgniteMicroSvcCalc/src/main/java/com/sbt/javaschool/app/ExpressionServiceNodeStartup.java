@@ -1,12 +1,14 @@
 package com.sbt.javaschool.app;
 
 import com.sbt.javaschool.common.filters.DivisionServiceFilter;
+import com.sbt.javaschool.common.filters.ExpressionServiceFilter;
 import com.sbt.javaschool.services.divideprocessor.DivisionServiceImpl;
 import com.sbt.javaschool.services.divideprocessor.common.DivisionService;
+import com.sbt.javaschool.services.expressionprocessor.ExpressionServiceImpl;
+import com.sbt.javaschool.services.expressionprocessor.common.ExpressionService;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteServices;
 import org.apache.ignite.Ignition;
-import org.apache.ignite.configuration.CacheConfiguration;
 import org.apache.ignite.configuration.DataStorageConfiguration;
 import org.apache.ignite.configuration.IgniteConfiguration;
 import org.apache.ignite.services.ServiceConfiguration;
@@ -17,10 +19,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DivisionServiceNodeStartup {
+public class ExpressionServiceNodeStartup {
     public static void main(String[] args) {
         Map<String, Boolean> attrs = new HashMap<>();
-        attrs.put("division.service.node", true);
+        attrs.put("expression.service.node", true);
 
         DataStorageConfiguration storageCfg = new DataStorageConfiguration();
         storageCfg.getDefaultDataRegionConfiguration().setMaxSize(
@@ -38,14 +40,15 @@ public class DivisionServiceNodeStartup {
                 .setDiscoverySpi(spi);
 
 
+
         Ignite ignite = Ignition.start(cfg);
 
 
         ServiceConfiguration divSvcCfg = new ServiceConfiguration();
         divSvcCfg.setMaxPerNodeCount(1)
-                .setService(new DivisionServiceImpl())
-                .setName(DivisionService.SERVICE_NAME)
-                .setNodeFilter(new DivisionServiceFilter());
+                .setService(new ExpressionServiceImpl())
+                .setName(ExpressionService.SERVICE_NAME)
+                .setNodeFilter(new ExpressionServiceFilter());
 
         IgniteServices services = ignite.services();
         services.deploy(divSvcCfg);

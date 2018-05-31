@@ -6,5 +6,5 @@ public interface DivisionService extends Service {
     public static final String SERVICE_NAME = "DivisionService";
     public static final String METRICS_CACHE_NAME = "CalculatorSvcMetrics";
 
-    float divide(float a, float b);
+    public <T extends Number> Number divide(T a, T b);
 }

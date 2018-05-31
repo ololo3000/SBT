@@ -33,8 +33,21 @@ public class SubtractionServiceImpl implements SubtractionService {
     }
 
     @Override
-    public float subtract(float a, float b) {
+    public <T extends Number> Number subtract(T a, T b) {
         cache.put(SERVICE_NAME, cache.get(SERVICE_NAME).incrHitCntr());
-        return a - b;
+
+        if (a instanceof Integer) {
+            return (Number) (a.intValue() - b.intValue());
+        } else if (a instanceof Float) {
+            return (Number) (a.floatValue() - b.floatValue());
+        }  else if (a instanceof Double) {
+            return (Number) (a.doubleValue() - b.doubleValue());
+        } else if (a instanceof Long) {
+            return (Number) (a.longValue() - b.longValue());
+        } else if (a instanceof Short) {
+            return (Number) (a.shortValue() - b.shortValue());
+        } else {
+            throw new ClassCastException();
+        }
     }
 }

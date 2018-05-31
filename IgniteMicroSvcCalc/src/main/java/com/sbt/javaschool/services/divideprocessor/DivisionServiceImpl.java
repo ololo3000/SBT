@@ -33,9 +33,25 @@ public class DivisionServiceImpl implements DivisionService {
     }
 
     @Override
-    public float divide(float a, float b) {
+    public <T extends Number> Number divide(T a, T b) {
         cache.put(SERVICE_NAME, cache.get(SERVICE_NAME).incrHitCntr());
-        return a / b;
-    }
 
+        if (b.equals(0)) {
+            throw new IllegalArgumentException("Argument 'divisor' is 0");
+        }
+
+        if (a instanceof Integer) {
+            return (Number) (a.intValue() / b.intValue());
+        } else if (a instanceof Float) {
+            return (Number) (a.floatValue() / b.floatValue());
+        }  else if (a instanceof Double) {
+            return (Number) (a.doubleValue() / b.doubleValue());
+        } else if (a instanceof Long) {
+            return (Number) (a.longValue() / b.longValue());
+        } else if (a instanceof Short) {
+            return (Number) (a.shortValue() / b.shortValue());
+        } else {
+            throw new ClassCastException();
+        }
+    }
 }
