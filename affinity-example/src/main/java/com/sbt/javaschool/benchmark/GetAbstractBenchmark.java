@@ -26,6 +26,8 @@ public abstract class GetAbstractBenchmark extends IgniteAbstractBenchmark {
         }
         com = company;
 
+
+
     }
 
     public Company getCompany() {

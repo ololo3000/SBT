@@ -1,0 +1,66 @@
+--Probe dump file for probe: org.yardstickframework.probes.ThroughputLatencyProbe@6ce90bc5 (class org.yardstickframework.probes.ThroughputLatencyProbe)
+--Created Tue Jun 12 18:55:39 MSK 2018
+--Benchmark config: BenchmarkConfiguration [memberId='0', driverNames='[GetBenchmark]', serverName='IgniteNode', threads=64, duration=60, warmup=40, dfltProbeClsNames=[ThroughputLatencyProbe, PercentileProbe], propsFileName='config/benchmark-atomic.properties', packages=[com.sbt.javaschool, org.yardstickframework, org.apache.ignite.yardstick], cmdArgs=[--outputFolder, /home/fl/SBT/affinity-example/bin/../output/results-20180612-185514, -id, 0, -cfg, /home/fl/SBT/affinity-example/bin/../config/division-service-config.xml, -nn, 5, -b, 1, -w, 40, -d, 60, -t, 64, -sm, PRIMARY_SYNC, -dn, GetBenchmark, -sn, IgniteNode, -ds, RELEASE-get-1-backup, --single-shot, --config, config/benchmark-atomic.properties, --logsFolder, /home/fl/SBT/affinity-example/bin/../output/logs-20180612-185514/logs_drivers, --currentFolder, /home/fl/SBT/affinity-example, --scriptsFolder, /home/fl/SBT/affinity-example/bin], probeWriter='null', customProps={ver="RELEASE-", b=1, DRIVER_HOSTS=localhost, d=60, t=64, BENCHMARK_PACKAGES=com.sbt.javaschool,org.yardstickframework,org.apache.ignite.yardstick, w=40, SERVER_HOSTS=localhost,localhost,localhost,localhost, sm=PRIMARY_SYNC, nodesNum=$((`echo ${SERVER_HOSTS} | tr ',' '' | wc -l` + `echo ${DRIVER_HOSTS} | tr ',' '' | wc -l`)), JVM_OPTS=${JVM_OPTS}" -DIGNITE_QUIET=false", CONFIGS="-cfg ${SCRIPT_DIR}/../config/division-service-config.xml -nn ${nodesNum} -b ${b} -w ${w} -d ${d} -t ${t} -sm ${sm} -dn GetBenchmark -sn IgniteNode -ds ${ver}get-${b}-backup --single-shot ,-cfg ${SCRIPT_DIR}/../config/division-service-config.xml -nn ${nodesNum} -b ${b} -w ${w} -d ${d} -t ${t} -sm ${sm} -dn AffinityGetBenchmark -sn IgniteNode -ds ${ver}affinity-get-${b}-backup --single-shot ,"}, shutdownHook=true, currentFolder=/home/fl/SBT/affinity-example, scriptsFolder=/home/fl/SBT/affinity-example/bin, logsFolder=/home/fl/SBT/affinity-example/bin/../output/logs-20180612-185514/logs_drivers, outputFolder=/home/fl/SBT/affinity-example/bin/../output/results-20180612-185514, outputWriter=java.io.PrintStream@4c103217, errorWriter=java.io.PrintStream@42d7d5e5, descriptions=[RELEASE-get-1-backup], hostName=]
+--Description: RELEASE-get-1-backup
+@@GetBenchmark
+**"Time, sec","Operations/sec (more is better)","Latency, nsec (less is better)"
+1528818981,92.00,1091709284.16
+1528818982,119.00,364470250.35
+1528818983,105.00,584397373.02
+1528818984,97.00,597647218.18
+1528818985,67.00,776514846.64
+1528818986,110.00,690283154.97
+1528818987,85.00,668657580.98
+1528818988,119.00,623960913.67
+1528818989,95.00,645083631.84
+1528818990,89.00,688666750.80
+1528818991,100.00,612037644.02
+1528818992,87.00,661086842.52
+1528818993,69.00,774374131.39
+1528818994,126.00,740375681.33
+1528818995,90.00,614263825.99
+1528818996,75.00,698059762.21
+1528818997,102.00,770615362.50
+1528818998,78.00,727487708.87
+1528818999,115.00,632432415.54
+1528819000,96.00,642596217.53
+1528819001,94.00,630314754.70
+1528819002,128.00,584681027.70
+1528819003,136.00,483261059.32
+1528819004,161.00,422503032.19
+1528819005,160.00,421301710.76
+1528819006,187.00,352186671.04
+1528819007,163.00,381518522.19
+1528819008,166.00,394919341.16
+1528819009,145.00,419205497.28
+1528819010,150.00,468220425.85
+1528819011,145.00,405381879.17
+1528819012,170.00,408568151.69
+1528819013,133.00,380476729.77
+1528819014,127.00,536023470.28
+1528819015,148.00,449088473.03
+1528819016,132.00,467304550.17
+1528819017,139.00,468506242.12
+1528819018,170.00,424613208.24
+1528819019,179.00,349573749.90
+1528819020,124.00,436907116.69
+1528819021,154.00,438965488.53
+1528819022,166.00,387745985.63
+1528819023,132.00,432301153.84
+1528819024,171.00,440847327.43
+1528819025,166.00,356289291.79
+1528819026,207.00,344106681.10
+1528819027,217.00,307390292.82
+1528819028,182.00,334034021.10
+1528819029,173.00,361786572.19
+1528819030,183.00,365856994.04
+1528819031,186.00,347092329.88
+1528819032,220.00,283285327.59
+1528819033,196.00,311565886.74
+1528819034,151.00,378267270.63
+1528819035,161.00,372943194.20
+1528819036,226.00,342007206.73
+1528819037,209.00,285940297.49
+1528819038,206.00,316140941.78
+1528819039,191.00,326086550.14
+1528819040,170.00,378195824.46
