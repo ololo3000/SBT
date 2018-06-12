@@ -12,11 +12,7 @@ public class DivisionBenchmark extends DivisionAbstractBenchmark {
 
     @Override
     public boolean test(Map<Object, Object> map) throws Exception {
-        service().divide(getRandomInt(1, 100),getRandomInt(1, 100));
+        service().divide(1,2);
         return true;
-    }
-
-    private int getRandomInt(int min, int max) {
-        return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 }

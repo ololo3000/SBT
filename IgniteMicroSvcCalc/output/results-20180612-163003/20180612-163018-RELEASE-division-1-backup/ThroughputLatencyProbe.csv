@@ -1,0 +1,28 @@
+--Probe dump file for probe: org.yardstickframework.probes.ThroughputLatencyProbe@37d00a23 (class org.yardstickframework.probes.ThroughputLatencyProbe)
+--Created Tue Jun 12 16:30:18 MSK 2018
+--Benchmark config: BenchmarkConfiguration [memberId='0', driverNames='[DivisionBenchmark]', serverName='IgniteNode', threads=64, duration=60, warmup=40, dfltProbeClsNames=[ThroughputLatencyProbe, PercentileProbe], propsFileName='config/benchmark-atomic.properties', packages=[com.sbt.javaschool, org.yardstickframework, org.apache.ignite.yardstick], cmdArgs=[--outputFolder, /home/fl/SBT/IgniteMicroSvcCalc/bin/../output/results-20180612-163003, -id, 0, -cfg, /home/fl/SBT/IgniteMicroSvcCalc/bin/../config/division-service-config.xml, -nn, 3, -b, 1, -w, 40, -d, 60, -t, 64, -sm, PRIMARY_SYNC, -dn, DivisionBenchmark, -sn, IgniteNode, -ds, RELEASE-division-1-backup, --single-shot, --config, config/benchmark-atomic.properties, --logsFolder, /home/fl/SBT/IgniteMicroSvcCalc/bin/../output/logs-20180612-163003/logs_drivers, --currentFolder, /home/fl/SBT/IgniteMicroSvcCalc, --scriptsFolder, /home/fl/SBT/IgniteMicroSvcCalc/bin], probeWriter='null', customProps={ver="RELEASE-", b=1, DRIVER_HOSTS=localhost, d=60, t=64, BENCHMARK_PACKAGES=com.sbt.javaschool,org.yardstickframework,org.apache.ignite.yardstick, w=40, SERVER_HOSTS=localhost,localhost, sm=PRIMARY_SYNC, nodesNum=$((`echo ${SERVER_HOSTS} | tr ',' '' | wc -l` + `echo ${DRIVER_HOSTS} | tr ',' '' | wc -l`)), JVM_OPTS=${JVM_OPTS}" -DIGNITE_QUIET=false", CONFIGS="-cfg ${SCRIPT_DIR}/../config/division-service-config.xml -nn ${nodesNum} -b ${b} -w ${w} -d ${d} -t ${t} -sm ${sm} -dn DivisionBenchmark -sn IgniteNode -ds ${ver}division-${b}-backup --single-shot ,-cfg ${SCRIPT_DIR}/../config/multiplication-service-config.xml -nn ${nodesNum} -b ${b} -w ${w} -d ${d} -t ${t} -sm ${sm} -dn MultiplicationBenchmark -sn IgniteNode -ds ${ver}miltiplication-${b}-backup --single-shot ,"}, shutdownHook=true, currentFolder=/home/fl/SBT/IgniteMicroSvcCalc, scriptsFolder=/home/fl/SBT/IgniteMicroSvcCalc/bin, logsFolder=/home/fl/SBT/IgniteMicroSvcCalc/bin/../output/logs-20180612-163003/logs_drivers, outputFolder=/home/fl/SBT/IgniteMicroSvcCalc/bin/../output/results-20180612-163003, outputWriter=java.io.PrintStream@990a256, errorWriter=java.io.PrintStream@7574d14, descriptions=[RELEASE-division-1-backup], hostName=]
+--Description: RELEASE-division-1-backup
+@@DivisionBenchmark
+**"Time, sec","Operations/sec (more is better)","Latency, nsec (less is better)"
+1528810260,68087.00,939697.50
+1528810261,75870.00,944216.85
+1528810262,75903.00,983341.50
+1528810263,85339.00,903443.15
+1528810265,85284.00,960271.23
+1528810266,84090.00,1040511.13
+1528810267,57590.00,1118980.57
+1528810268,59488.00,1074254.69
+1528810274,12437.14,654335.10
+1528810276,97218.00,4547951.82
+1528810277,103410.00,796972.98
+1528810278,77729.00,827801.68
+1528810279,71707.00,889626.09
+1528810284,16559.40,622937.63
+1528810285,101376.00,3283120.70
+1528810289,3202.00,1053694.15
+1528810294,18765.60,3743465.60
+1528810298,15014.60,3719547.21
+1528810303,14882.00,4932027.22
+1528810307,11490.25,5833352.80
+1528810312,9368.50,7040502.68
+1528810318,3106.67,14702564.50

@@ -8,8 +8,20 @@
     <bean id="grid.cfg" class="org.apache.ignite.configuration.IgniteConfiguration" parent="base-ignite.cfg">
         <property name="userAttributes">
             <map key-type="java.lang.String" value-type="java.lang.Boolean">
-                <entry key="division.service.node" value="true"/>
+                <entry key="division.service.node" value="true" />
             </map>
+        </property>
+
+        <property name="cacheConfiguration">
+            <bean class="org.apache.ignite.configuration.CacheConfiguration">
+                <property name="name" value="CalculatorSvcMetrics"/>
+
+                <!--
+                  Enabling a special nodes filter for the cache. The filter will make sure that the cache
+                  will be deployed only on Data Nodes, the nodes that have 'data.node' attribute in the local
+                  node map.
+                -->
+            </bean>
         </property>
 
         <property name="serviceConfiguration">
